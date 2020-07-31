@@ -1,0 +1,39 @@
+<html>
+    <form action="/test" method="POST">
+    <input type="textbox" id="fname">FName
+    <input type="checkbox" name="chc" value="chk1">Checked
+
+    <input type="checkbox" name="chc" value="chk2">chk2
+        <input type="radio" name="choice" value="one">One
+        <input type="radio" name="choice" value="two">Two
+        <input type="radio" name="choice" value="three">Three
+        <input type="submit" id="btn">
+    </form>
+   
+    <script src="serve.js"></script>
+
+    <script>
+        const btn = document.querySelector('#btn');
+        // handle click button
+        btn.onclick = function () {
+
+            const rbs = document.querySelectorAll('input[name="choice"]');
+            let selectedValue;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                    selectedValue = rb.value;
+                    break;
+                }
+            }
+
+            const checkboxes = document.querySelectorAll('input[name="chc"]:checked');
+
+let colors = [];
+checkboxes.forEach((checkbox) => {
+    colors.push(checkbox.value);
+    console.log("yes");
+});
+alert(colors[0]);
+        }
+    </script>
+</html>

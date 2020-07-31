@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta charset="utf-8">
+	<title>Tutor Signup Page</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+
+<body>
+	<p>Tutor Signups</p>
+	<!--need to ask what the url will be to send the form data-->
+	<form id="tutorsignups" action="./tutorthankyou.html" enctype="multipart/form-data" method="post">
+		<ul>
+			<li>
+				<label for="first_name">First Name:</label>
+				<input type="text" id="first_name" name="first_tutor_name" required>
+			</li>
+			<li>
+				<label for="last_name">Last Name:</label>
+				<input type="text" id="last_name" name="last_tutor_name" required>
+			</li>
+			<li>
+				<label for="mail">E-mail:</label>
+				<input type="email" id="mail" name="tutor_email" required placeholder="Enter a valid email">
+			</li>
+			<li>
+				<legend>Gender:</legend>
+				<ul>
+					<li>
+						<label for="gender1">
+							<input type="radio" id="gender1" name="gender" value="M" required>
+							Male
+						</label>
+					</li>
+					<li>
+						<label for="gender2">
+							<input type="radio" id="gender2" name="gender" value="F">
+							Female
+						</label>
+					</li>
+					<li>
+						<label for="gender3">
+							<input type="radio" id="gender3" name="gender" value="NA">
+							I'd prefer not to answer
+						</label>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<label for="school">School Name:</label>
+				<input type="text" id="school" name="tutor_school" required>
+			</li>
+			<li>
+				<legend>Which grade will you be attending in fall 2020?:</legend>
+				<ul>
+					<li>
+						<label for="grade1">
+							<input type="radio" id="grade1" name="grade" value="9" required>
+							9th
+						</label>
+					</li>
+					<li>
+						<label for="grade2">
+							<input type="radio" id="grade2" name="grade" value="10">
+							10th
+						</label>
+					</li>
+					<li>
+						<label for="grade3">
+							<input type="radio" id="grade3" name="grade" value="11">
+							11th
+						</label>
+					</li>
+					<li>
+						<label for="grade4">
+							<input type="radio" id="grade4" name="grade" value="12">
+							12th
+						</label>
+					</li>
+					<li>
+						<label for="grade5">
+							<input type="radio" id="grade5" name="grade" value="">
+							Other:
+							<input type="text" name="other_grade">
+						</label>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<legend>Which subjects can you provide tutoring in?:</legend>
+				<div>
+				<ul>
+					<li>
+						<label for="subj1">
+							<input type="checkbox" id="subj1" name="subj" value="english">
+							English
+						</label>
+					</li>
+					<li>
+						<label for="subj2">
+							<input type="checkbox" id="subj2" name="subj" value="math">
+							Math
+						</label>
+					</li>
+					<li>
+						<label for="subj3">
+							<input type="checkbox" id="subj3" name="subj" value="science">
+							Science
+						</label>
+					</li>
+					<li>
+						<label for="subj4">
+							<input type="checkbox" id="subj4" name="subj" value="">
+							Other:
+							<input type="text" name="other_subj">
+						</label>
+					</li>
+				</ul>
+				</div>
+			</li>
+			<li>
+				<label for="exp">
+					<span>Do you have tutoring experience before?:</span>
+				</label>
+				<select id="exp" name="tutor_exp" required>
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</select>
+			</li>
+			<li>
+				<label for="transcipt">Please upload your transcript. You can black out everything except name, courses that you want to teach and grade</label>
+				<input type="file" id="transcript" name="tutor_trans" accept="application/pdf" title="Only pdfs are allowed" required>
+			</li>
+			<li>
+				<label for="cv">Please upload your CV</label>
+				<input type="file" id="cv" name="tutor_cv" accept="application/pdf" title="Only pdfs are allowed" required>
+			</li>
+			<li>
+				<label for="avail">How many hours do you want to tutor in a week:</label>
+				<input type="text" name="avail" id="tutor_avail" required>
+			</li>
+			<li>
+				<legend>Do you want to so short or long term coaching?:</legend>
+				<ul>
+					<li>
+						<label for="duration1">
+							<input type="radio" id="duration1" name="duration" value="1-3" required>
+							1-3 months
+						</label>
+					</li>
+					<li>
+						<label for="duration2">
+							<input type="radio" id="duration2" name="duration" value="3-6">
+							3-6 months
+						</label>
+					</li>
+					<li>
+						<label for="duration3">
+							<input type="radio" id="duration3" name="duration" value="6-12">
+							6-12 months
+						</label>
+					</li>
+					<li>
+						<label for="duration4">
+							<input type="radio" id="duration4" name="duration" value="12+">
+							12+ months
+						</label>
+					</li>
+
+				</ul>
+			</li>
+			<li>
+				<legend>How many students are you open to tutoring at a time?:</legend>
+				<ul>
+					<li>
+						<label for="pref1">
+							<input type="radio" id="pref1" name="pref" value="1" required>
+							1 student
+						</label>
+					</li>
+					<li>
+						<label for="pref2">
+							<input type="radio" id="pref2" name="pref" value="2-3">
+							2-3
+						</label>
+					</li>
+					<li>
+						<label for="pref3">
+							<input type="radio" id="pref3" name="pref" value="none">
+							I only care about the total number of sessions I teach
+						</label>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<legend>Why do you want to tutor?:</legend>
+				<div>
+				<ul>
+					<li>
+						<label for="motive1">
+							<input type="checkbox" id="motive1" name="motive" value="hours">
+							Gain communitity service hours
+						</label>
+					</li>
+					<li>
+						<label for="motive2">
+							<input type="checkbox" id="motive2" name="motive" value="communicate">
+							Improve communication skills
+						</label>
+					</li>
+					<li>
+						<label for="motive3">
+							<input type="checkbox" id="motive3" name="motive" value="">
+							Other:
+							<input type="text" id="motive3" name="motive">
+						</label>
+					</li>
+				</ul>
+				</div>
+			</li>
+			<li>
+				<label for="msg">Anything else you would like to share with us?:</label>
+				<textarea name="tutor_message" id="msg" cols="30" rows="10"></textarea>
+			</li>
+			<li class="button">
+				<button type="submit" onclick="myFunction()">Submit</button>
+            </li>
+            <script>
+                function myFunction() {
+                  alert("Thanks Tutor");
+                }
+                </script>
+		</ul>
+	</form>
+	<!--how do we convert the info to a JSON-->
+
+	<script>
+	(function() {
+		const form = document.querySelector('#tutorsignups');
+		const checkboxes = form.querySelectorAll('input[type=checkbox]');
+		const checkboxLength = checkboxes.length;
+		const firstCheckbox = checkboxLength > 0 ? checkboxes[0] : null;
+	
+		function init() {
+			if (firstCheckbox) {
+				for (let i = 0; i < checkboxLength; i++) {
+					checkboxes[i].addEventListener('change', checkValidity);
+				}
+	
+				checkValidity();
+			}
+		}
+	
+		function isChecked() {
+			for (let i = 0; i < checkboxLength; i++) {
+				if (checkboxes[i].checked) return true;
+			}
+	
+			return false;
+		}
+	
+		function checkValidity() {
+			const errorMessage = !isChecked() ? 'At least one checkbox must be selected.' : '';
+			firstCheckbox.setCustomValidity(errorMessage);
+		}
+	
+		init();
+	})();
+
+	</script>
+	<!-- <script>
+		$('#tutorsignups').serializeJSON();
+	</script> -->
+	<script src="./renderform.js"> </script>
+
+</body>
+
+</html>
